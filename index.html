@@ -17,9 +17,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
+    <script src="scripts/main.js"></script>
 </head>
-
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -45,18 +44,99 @@
       </div>
     </div>
   </nav>
-  <header class="hero">
-    <div class="container h-100">
-      <div class="row h-100">
-        <div class="col-lg-7 my-auto">
-          <div class="header-content mx-auto">
+
+  </head>
+  <body>
+    
+  <div class="slideshow-container">
+    
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="images/heroImage.png" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="images/mountains.png" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="images/heroImage.png" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+  <script>
+    var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+  </script> 
+   
+   
+  <section class="about" id="about">
+    <div class="container" style="padding-top: 20px;">
+      <div class="section-heading text-center">
+        <h3 style="text-align: center; font-size: 30px;"> <i class="bi-info-circle me-2"></i> About us</h3>
+        <p class="text-muted">At UniLife, we truly understand what it is like to .......</p>
+        <hr>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 my-auto">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="feature-item">
+                  <i class="icon-screen-smartphone text-primary"></i>
+                  <h3>Address</h3>
+                  <p class="text-muted">7 Rogers Road <br> Ottawa, ON <br>K1T 0W7</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="feature-item">
+                  <i class="icon-camera text-primary"></i>
+                  <h3>Hours</h3>
+                  <p class="text-muted">9:00am - 5:00pm</p>
+                  <p class="text-muted">Monday - Friday</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="feature-item">
+                  <i class="icon-present text-primary"></i>
+                  <h3>Contact US</h3>
+                  <p class="text-muted">+1 (819) 102-0002</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </header>
-
-  <img src="images/heroImage.png" style="width:100%;">
+  </section>
 
 </body>
 </html>
