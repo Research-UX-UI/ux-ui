@@ -27,10 +27,16 @@ body {
   position: absolute;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
   color: #fff;
-  padding: 23% 26%;
+  padding: 21% 26%;
+  overflow:auto;
   top:0;
   left:0;
 }
+
+#button1 , #button2 {
+  display:inline-block;
+  /* additional code */
+  }
 
 .overlay-text h2 {
   text-align: center;
