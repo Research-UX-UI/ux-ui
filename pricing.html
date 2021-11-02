@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>UniLife</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="scripts/main.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/pricing.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Poppins&display=swap" rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+          <h1 >
+            <img class="image"src="images/logo.jpeg"  class="navbar-brand js-scroll-trigger" href="#page-top"style="font-size: 40px; color: black;padding-bottom: 15px;"> UniLife</a>
+          </h1>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger light"  style="font-size: 25px;color: black;" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+             <a class="nav-link js-scroll-trigger light"  style="font-size: 25px;color: black;" href="adventure.html">Adventures</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger black"  style="font-size: 25px; color: black;"href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger light"  style="font-size: 25px;color: black;" href="contact.html" >Contact</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+
+   
+        <div >
+          <div class="mainpage">
+          <script>
+            $(document).ready(function(){
+                $(window).scroll(function(){
+                    var scroll = $(window).scrollTop();
+                  if (scroll > 100) {
+                      $("#mynav").css("background" , "transparent");
+                        $("#mynav").css("box-shadow" , "0 2px 4px -2px gray");
+                        $("#mynav").css("transition" , "0.4s all ease");
+                  }
+        
+                  else{
+                    $("#mynav").css("background" , "transparent");  
+                        $("#mynav").css("border" , "none");	
+                        $("#mynav").css("box-shadow" , "none");
+                  }
+                })
+            })
+          </script>
+          
+            <section class="subscription_method">
+                <div class="column">
+                  <div class="price_h">
+                    <div class="price">
+                      <div class="dollar">$</div>
+                      100
+                      <div class="monthly">/mo</div>
+                    </div>
+                    <div class="name">Regular</div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="feature">
+                    <img src="iconmonstr-check-mark-13.svg">
+                    Food
+                  </div>
+                  <div class="feature">
+                    <img src="iconmonstr-check-mark-13.svg">
+                    Transport
+                  </div>
+                  <div class="feature no">
+                    <img src="x-square.svg">
+                    Lodging
+                  </div>
+                  <div class="feature no">
+                    <img src="x-square.svg">
+                    Skydiving
+                  </div>
+                  <div class="feature no">
+                    <img src="x-square.svg">
+                    Scuba diving
+                  </div>
+                  <div class="feature no">
+                    <img src="x-square.svg">
+                    Bungee Jumping
+                   
+                  </div>
+                  <button class="cta" onclick="regular()">Payment method</button>
+                </div>
+                <div class="column nice">
+                  <div class="Recommended">Recommended</div>
+                  <div class="price_h">
+                    <div class="price">
+                      <div class="dollar">$</div>
+                      150
+                      <div class="monthly">/mo</div>
+                    </div>
+                    <div class="name">Premium </div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="feature">
+                    <img src="iconmonstr-check-mark-13.svg">
+                    Food
+                  </div>
+                  <div class="feature">
+                    <img src="iconmonstr-check-mark-13.svg">
+                    Transport
+                  </div>
+                  <div class="feature">
+                    <img src="iconmonstr-check-mark-13.svg">
+                    Lodging
+                  </div>
+                  <div class="feature">
+                    <img src="iconmonstr-check-mark-13.svg">
+                    Skydiving
+                  </div>
+                  <div class="feature no">
+                    <img src="x-square.svg">
+                    Scuba diving
+                  </div>
+                  <div class="feature no">
+                    <img src="x-square.svg">
+                    Bungee Jumping
+                  </div>
+                  <button class="cta" onclick = "premium()">Payment method</button>
+                </div>
+                <div class="column Luxe">
+                  
+                  <div class="price_h">
+                    <div class="price">
+                      <div class="dollar">$</div>
+                      300
+                      <div class="monthly">/mo</div>
+                    </div>
+                    <div class="name">Luxe</div>
+                  </div>
+                  <div class="divider"></div>
+                  <div class="feature">
+                    <img src="iconmonstr-check-mark-13.svg">
+                    Food
+                  </div>
+                  <div class="feature">
+                    <img src="iconmonstr-check-mark-13.svg">
+                    Transport
+                  </div>
+                  <div class="feature">
+                    <img src="iconmonstr-check-mark-13.svg">
+                    Lodging
+                  </div>
+                  <div class="feature">
+                    <img src="iconmonstr-check-mark-13.svg">
+                    Skydiving
+                  </div>
+                  <div class="feature">
+                    <img src="iconmonstr-check-mark-13.svg">
+                    Scuba diving
+                  </div>
+                  <div class="feature">
+                    <img src="iconmonstr-check-mark-13.svg">
+                    Bungee Jumping
+                  </div>
+                  <button class="cta" onclick="luxe()">Payment method</button>
+                  </div>
+              </section>
+          </div>
+        
+        
+        
+        </div>
+        <div class="footer-container">
+          <div class="footer">
+              <div class="footer-heading footer-1">
+                  <h2>Quick Links</h2>
+                  <a href="index.html">Main Page</a>
+                  <a href="adventures.html">Adventures</a>
+                  <a href="survey.html">Survey</a>
+                  <a href="pricing.html">Pricing</a> 
+                  <a href="contact.html">Contact Us!</a>
+              </div>
+              <div class="footer-heading footer-2">
+                <h2>Customer Support</h2>
+                <a href="../support/support.html">Support</a>
+                <a class = "email" onclick="myFunction()">Our Email</a>
+              </div>
+              <div class="footer-email-form">
+                  <h2>Join Our Newsletter</h2>
+                  <input type="email" placeholder="Enter your email address" id="footer-email">
+                  <input onclick="document.location.reload(true)" type="submit" value="Sign Up" id="footer-email-btn">
+              </div>
+          </div>
+          <div class="copyright">
+            <p>
+              All rights reserved to UniLife © - 2021
+          </p>
+          </div>
+        </div>
+        
+              <script>
+                var mybutton = document.getElementById("myBtn");
+                // Java Script Code
+               
+                window.onscroll = function() {scrollFunction()};
+                
+                function scrollFunction() {
+                  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    mybutton.style.display = "block";
+                  } else {
+                    mybutton.style.display = "none";
+                  }
+                }
+                function topFunction() {
+                  document.body.scrollTop = 0;
+                  document.documentElement.scrollTop = 0;
+                }
+                </script>  
+                    <script>
+                      function myFunction() {
+                          alert("contact@slooshys.ca");
+                      }
+                      function regular() {
+                        alert("Thank you for choosing our Regular package!")
+                      }
+                      function premium() {
+                        alert("Thank you for choosing our Premium package!")
+                      }
+                      function luxe() {
+                        alert("Thank you for choosing our Luxe package!")
+                      }
+                      </script>    
+  
+              
+
+      
+    </body>
+</html>
