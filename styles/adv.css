@@ -50,7 +50,6 @@ nav{
     background:#D4E4BC;
     color: white;
     margin: 50px;
-    padding: 50px;
     display: none;
     justify-content: space-between;
     align-items: center;
@@ -395,7 +394,7 @@ main {
     color:deeppink;
 }
 .content-wrapper{
-    padding : 200px;
+    padding : 100px;
     padding-top: 20px;
 
 }
