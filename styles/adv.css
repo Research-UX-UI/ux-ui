@@ -1,52 +1,276 @@
-body{
-    font-family: 'Gilroy';
-
-}
-.bg-container{
+body {
     margin: 0;
     width: 100%;
-    height: 1000px;
+    height: 100%;
+    font-family: 'Gilroy';
+    color: #222222;
+    font-size: x-large;
+    background-image: url('calm.png');
+    background-size: 100% 100%;
     background-color: white ;
 }
-
-nav{
-    background-color: #ffffff;
-    position: absolute; 
-    top: 0.5; 
-    width: 100%; 
-    height: 8%;
-}
-
 .image{
     max-width: 8%;
-  }
-
-.text-box{
-    position: absolute;
-    bottom: 20px;
-    right: 40px;
-    padding-bottom: 90px;
-    color: white;
-    padding-right: 150px;
 }
-h3{
-    text-align:right;
-    color: white;
-    font-size: 30px;
+
+.test2{
+    margin:5rem;
+    align-items: right;
+}
+  
+nav{
+  background-color: #ffffff;
+  position: absolute; 
+  top: 0.5; 
+  width: 100%; 
+  height: 8%;
+}
+
+
+
+main {
+    font-family: 'Arimo', sans-serif;
+    margin-top: 5%;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
+.first_paragraph{
+    padding : 50px;
+    text-align: center;
+}
+.two-column-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.profile-image-wrapper img{
+    width: 100%;
+    height: 100%;
+    
     
 }
-.btn1{
-    margin-bottom: 10px;
-    border-radius: 20px;
-    width: 150px;
-    height: 100px;
-    border: 1px solid;
-    background-color: white;
+.profile-content-wrapper{
+    padding: 50px;
+    text-align: center;
+    background-color: ivory;
+    
+}
+.profile-content-wrapper h3{
+    color:deeppink;
+}
+.content-wrapper{
+    padding : 200px;
+    padding-top: 20px;
+
+}
+.para1{
+    text-align: center;
+    font-size: x-large;
+    color: deeppink;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+}
+h1{
+    font-family: 'Poppins',sans-serif;
+}
+h3{
+   padding: 30px;
+   margin-left: 30px; 
+   padding-bottom: 20px;
 }
 
-box p{
-    text-align: right;
+h2{
+    text-align: center;
 }
+h4{
+    text-align: center;
+}
+
+  .tab {
+    overflow: hidden;
+    background-color: #656565;
+    color: white;
+  }
+  
+  .tab button {
+    font-size: large;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    color: white;
+    font-size: 25px;
+    background-color: inherit;
+    right: auto;
+  }
+  
+  .tab button:hover {
+    background-color: #a9a9a9;
+  }
+  
+  .tab button.active {
+    background-color: #000000;
+  }
+  
+  .tabcontent {
+    background:#f1f1f1;
+    color: white;
+    padding: 50px;
+    margin: 50px;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    flex-wrap: wrap;
+    max-width: 1200px;
+  }
+  
+  .style{
+    color: #333;
+    font-size: 25px;
+    text-align: left;
+    margin: 10px;
+  }
+  
+  .tabcontent .option_item {
+    display: block;
+    margin: 5px;
+    position: relative;
+    width: 400px;
+    height: 220px;
+    
+  }
+  
+  .tabcontent .option_item .checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+  }
+  
+  .displayProd{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .displayProd .option_item{
+    display: flex;
+    margin: 20px;
+  }
+  
+  .option_item .option_inner {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 58px 40px;
+    cursor: pointer;
+    color: #585c68;
+    display: block;
+    border: 5px solid transparent;
+    position: relative;
+  }
+  
+  .option_item .option_inner .image {
+    margin-bottom: 10px;
+  }
+  .image > img{
+    position: absolute;
+    display:block;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 120%;
+    max-height: 120%;
+  }
+  
+  .image:hover img{
+    object-fit: center;
+    left: -20px;
+    height: 120%;
+    width: 120%;
+    transition: 0.8s;
+  }
+  
+  .option_item:hover .text{
+    opacity: 1;
+    transform : translateY(0);
+  }
+  
+  .option_item .text{
+    position: relative;
+    color: #fff;
+    opacity: 0;
+    transform: translateY(60px);
+    z-index: 3;
+  }
+  .text{
+    letter-spacing: 2px;
+    font-family: Andale Mono, monospace;
+  }
+  
+  .option_item .checkbox:checked ~ .option_inner.lactosefree {
+    border-color: #000000;
+    color: #000000;
+  }
+  
+  .option_item .checkbox:checked ~ .option_inner.nutfree {
+    border-color: #000000;
+    color: #000000;
+  }
+  
+  .option_item .checkbox:checked ~ .option_inner.organic {
+    border-color: #000000;
+    color: #000000;
+  }
+  
+  .option_item:hover{
+    transform: translateY(-20px);
+    cursor: pointer;
+  }
+  
+  .option_item:hover:before{
+    opacity: 1;
+  }
+  
+  .option_item:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, #000, transparent);
+    z-index: 2;
+    opacity: 0;
+  }
+  .option_item{
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    width: 360px;
+    height: 400px;
+    transition: .8s ease-out;
+    overflow: hidden;
+  }
+  
+  .tabcontent button{
+    background: #000000;
+    padding: 40px 30px;
+    font-size: 25px;
+    margin:20px;
+    font-family: "montserrat";
+    color: white;
+  }
+  
+  .tabcontent button:hover {
+    background-color: #808080;
+  }
+  
 
  /*FOOTER */
  *{

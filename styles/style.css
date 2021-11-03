@@ -58,6 +58,7 @@ h3{
 #button1 , #button2 {
   display:inline-block;
   height: 50px;
+  padding: 10px;
   background-color: transparent;
   border: 1px solid white;
   border-radius: 5px;
