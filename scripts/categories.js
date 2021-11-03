@@ -62,13 +62,6 @@ function openAll(){
 	}
 }
 
-function openCarbs() {
-	hideElems();
-	for (var i = 0; i < carbs.length; i++) {
-		carbs[i].style.display = "flex";
-	}
-}
-
 function openFruits() {
 	hideElems();
 	for (var i = 0; i < fruits.length; i++) {

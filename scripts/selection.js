@@ -2,166 +2,148 @@ const selectedRestrictions = new Set()
 
 var products = [
 	{
-		name: "Brocoli",
-		picture: "pictures/brocoli.jpg",
+		name: "WATERSKIING",
+		picture: "images/waterskiing.png",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
 		type : "Vegetable",
-		price: 2.00
 	},
 	{
-		name: "Bread",
-		picture: "pictures/bread.jpg",
+		name: "SURFING",
+		picture: "images/surfing.png",
 		LactoseFree: false,
 		NutFree: false,
 		isOrganic:true,
 		type : "Carbs",
-		price: 2.00
 	},
 	{
-		name: "Tomato",
-		picture: "pictures/tomato.jpg",
+		name: "CANOEING",
+		picture: "images/canoe.png",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
 		type : "Vegetable",
-		price: 4.00
 	},
 	{
-		name: "Organic Cheese",
-		picture: "pictures/organic_cheese.jpg",
+		name: "KAYAKING",
+		picture: "images/kayak.png",
 		LactoseFree: false,
 		NutFree: true,
 		isOrganic:true,
 		type : "Dairy",
-		price: 3.50
 	},
 	{
-		name: "Cheese",
-		picture: "pictures/cheese.jpg",
+		name: "FISHING",
+		picture: "images/fishing.png",
 		LactoseFree: false,
 		NutFree: true,
 		isOrganic:false,
 		type : "Dairy",
-		price: 2.50
 	},
 	{
-		name: "Salmon",
-		picture: "pictures/salmon.jpg",
+		name: "JETSKIING",
+		picture: "images/jetski.png",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
 		type : "Protein",
-		price: 10.00
 	},
 	{
-		name: "Apple",
-		picture: "pictures/apple.jpg",
+		name: "SCUBA DIVING",
+		picture: "images/scuba.png",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:false,
 		type : "Fruit",
-		price: 1.70
 	},
 	{
-		name: "Milk",
-		picture: "pictures/milk.jpg",
+		name: "SKI",
+		picture: "images/ski.png",
 		LactoseFree: false,
 		NutFree: true,
 		isOrganic:true,
 		type : "Dairy",
-		price: 8.50
 	},
 	{
-		name: "Almonds",
-		picture: "pictures/almonds.jpg",
+		name: "ICE CLIMBING",
+		picture: "images/ice.png",
 		LactoseFree: true,
 		NutFree: false,
 		isOrganic:true,
 		type : "Fat",
-		price: 2.00
 	},
 	{
-		name: "Rice",
-		picture: "pictures/rice.jpg",
+		name: "FAT BIKING",
+		picture: "images/fatbiking.png",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:false,
 		type : "Carbs",
-		price: 13.00
 	},
 	{
-		name: "Honey",
-		picture: "pictures/honey.jpg",
+		name: "DOG SLEDDING",
+		picture: "images/dog.png",
 		LactoseFree: true,
 		NutFree: false,
 		isOrganic:false,
 		type : "Fat",
-		price: 4.00
 	},
 	{
-		name: "Avacado",
-		picture: "pictures/avocado.jpg",
+		name: "ICE DIVING",
+		picture: "images/icediving.png",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:false,
 		type : "Fruit",
-		price: 4.00
 	},
 	{
-		name: "Strawberry",
-		picture: "pictures/strawberry.jpg",
+		name: "HIKING",
+		picture: "images/hiking.png",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
 		type : "Fruit",
-		price: 2.50
 	},
 	{
-		name: "Banana",
-		picture: "pictures/banana.jpg",
+		name: "TRAIL",
+		picture: "images/trail.png",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
 		type : "Fruit",
-		price: 1.50
 	},
 	{
-		name: "Pho",
-		picture: "pictures/pho.jpg",
+		name: "SKATING",
+		picture: "images/skating.png",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
 		type : "Vietnamese",
-		price: 9.50
 	},
 	{
-		name: "Cha Ca",
-		picture: "pictures/chaca.jpg",
+		name: "RACING",
+		picture: "images/racing.png",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
 		type : "Vietnamese",
-		price: 7.50
 	},
 	{
-		name: "Cao Lau",
-		picture: "pictures/caolau.jpg",
+		name: "BIKING",
+		picture: "images/biking.png",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
 		type : "Vietnamese",
-		price: 10.50
 	},
 	{
-		name: "Banh khot",
-		picture: "pictures/banhkhot.jpg",
+		name: "CAMPING",
+		picture: "images/camping.png",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
 		type : "Vietnamese",
-		price: 14.00
 	},
 ];
 
@@ -182,13 +164,3 @@ function restrictListProducts(prods) {
 	}
 	return filteredProducts;
   }
-
-function getTotalPrice(chosenProducts) {
-	totalPrice = 0;
-	for (let i=0; i<products.length; i+=1) {
-		if (chosenProducts.indexOf(products[i].name) > -1){
-			totalPrice += products[i].price;
-		}
-	}
-	return totalPrice;
-}

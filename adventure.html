@@ -66,7 +66,7 @@
                 </div>
 
                 <div class="profile-content-wrapper">
-                    <h3>NIAGRA FALLS</h3>
+                    <h3>Niagra Falls</h3>
                     <p> Niagara Falls, Ontario, is a Canadian city at the famous waterfalls of the same name, linked with the U.S. by the Rainbow Bridge. Its site on the Niagara River's western shore overlooks the Horseshoe Falls, the cascades' most expansive section. Elevators take visitors to a lower, wetter vantage point behind the falls. A cliffside park features a promenade alongside 520-ft.-high Skylon Tower with an observation deck.
                     </p>
                 </div>
@@ -133,35 +133,33 @@
           
 
           <div class="tab" >
-            <h1>The Corner Store</h1>
-            <button class="tablinks" onclick="openInfo(event, 'Client')">Personal Info</button>
-            <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-            <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+            <h2 style="font-size:30px">INTERACTIVE SURVEY</h2>
+            <button class="tablinks" onclick="openInfo(event, 'Client')">Trips</button>
+            <button class="tablinks" onclick="openInfo(event, 'Products')">Activities</button>
+            <button class="tablinks" onclick="openInfo(event, 'Cart')">Register</button>
           </div>
           <div class="wrapper">
             <div id="homepage" class="tabcontent">
               <div id="info" class="introduction">
-                <h3>THE CORNER STORE</h3>
+                <h1 style="font-size: 30px;">UniLife</h1>
                 <br>
                 <p>
-                  Please use the 3 options provided in the menu to set your personal restrictions, choose items and check your cart. Thank you!
+                  Please use the 5 options provided in the menu to set your personal prefernce for the available trips, choose activities and register now. Thank you!
                 </p>
               </div>
             </div>
             <div id="Client" class="tabcontent">
               <div id="info" class="introduction">
-                <h3>Client Information</h3>
+                <h2>Trip informations</h2>
                 <br>
                 <p>
-                  Do you have any food
-                  <br>
-                   restrictions?
+                  Do you have any trip preference?
                 </p>
                 <br>
                 <b>Choose a Category:</b>
                 <p>
                   <small>
-                    (if you have no restrictions move on to products)
+                    (if you have no preferences move on to activities)
                   </small>
                 </p>
               </div>
@@ -170,11 +168,11 @@
                   <input type="checkbox" class="checkbox" id="lactose-free" name="lactose-free" value="Lactose-Free" onchange="populateListProductChoices(this.id)">
                   <div class="option_inner lactosefree">
                     <div class="icon">
-                      <img src="pictures/lactosefree.jpg" alt="">
+                      <img src="images/niagra.png" alt="">
                     </div>
                     <div class="tickmark"></div>
                     <div class="boxtext">
-                      <h2>Lactose-Free</h2>
+                      <h2>Niagra Falls</h2>
                     </div>
                   </div>
                 </label>
@@ -182,11 +180,11 @@
                   <input type="checkbox" class="checkbox" id="nut-free" name="nut-free" value="Nut-Free" onchange="populateListProductChoices(this.id)">
                   <div class="option_inner nutfree">
                     <div class="icon">
-                      <img src="pictures/nutfree.jpg" alt="">
+                      <img src="images/banff.png" alt="">
                     </div>
                     <div class="tickmark"></div>
                     <div class="boxtext">
-                      <h2>Nut-Free</h2>
+                      <h2>Banff</h2>
                     </div>
                   </div>
                 </label>
@@ -194,17 +192,42 @@
                   <input type="checkbox" class="checkbox" id="organic" name="organic" value="Organic" onchange="populateListProductChoices(this.id)">
                   <div class="option_inner organic">
                     <div class="icon">
-                      <img src="pictures/organic.jpg" alt="">
+                      <img src="images/bc.jpeg" alt="">
                     </div>
                     <div class="tickmark"></div>
                     <div class="boxtext">
-                      <h2>Organic</h2>
+                      <h2>Whistler</h2>
+                    </div>
+                  </div>
+                </label>
+                <label class="option_item">
+                  <input type="checkbox" class="checkbox" id="organic" name="organic" value="Organic" onchange="populateListProductChoices(this.id)">
+                  <div class="option_inner organic">
+                    <div class="icon">
+                      <img src="images/tremblant.jpeg" alt="">
+                    </div>
+                    <div class="tickmark"></div>
+                    <div class="boxtext">
+                      <h2>Mont-Tremblant</h2>
+                    </div>
+                  </div>
+                </label>
+                <label class="option_item">
+                  <input type="checkbox" class="checkbox" id="organic" name="organic" value="Organic" onchange="populateListProductChoices(this.id)">
+                  <div class="option_inner organic">
+                    <div class="icon">
+                      <img src="images/nf.jpeg" alt="">
+                    </div>
+                    <div class="tickmark"></div>
+                    <div class="boxtext">
+                      <h2>Gros Morne</h2>
                     </div>
                   </div>
                 </label>
               </div>
-              <button id="selectrestrictions" type="button" class="block" onclick="selectedRes()"><b>Select your current restrictions</b></button>
+              <button id="selectrestrictions" type="button" class="block" onclick="selectedRes()"><b>Select your current preferences</b></button>
             </div>
+            
             <div id="Products" class="tabcontent">
               <div id="prod" class="introduction">
                 <h3>Your targeted products</h3>
@@ -218,14 +241,13 @@
               </div>
               <br>
               <div class="tab" >
-                <button class="tablinks" onclick="openAll()">All Products</button>
-                <button class="tablinks" onclick="openFruits()">Fruits</button>
-                <button class="tablinks" onclick="openVeg()">Vegetables</button>
-                <button class="tablinks" onclick="openDairy()">Dairy</button>
-                <button class="tablinks" onclick="openProtein()">Proteins</button>
-                <button class="tablinks" onclick="openFat()">Fats</button>
-                <button class="tablinks" onclick="openCarbs()">Carbs</button>
-                <button class="tablinks" onclick="openViet()">Vietnamese Food Delivery</button>
+                <button class="tablinks" onclick="openAll()">All Activities</button>
+                <button class="tablinks" onclick="openFruits()">Water Sports</button>
+                <button class="tablinks" onclick="openVeg()">Land Sports</button>
+                <button class="tablinks" onclick="openDairy()">Mountain Sports</button>
+                <button class="tablinks" onclick="openProtein()">Winter Sports</button>
+                <button class="tablinks" onclick="openFat()">Summer Sports</button>
+                <button class="tablinks" onclick="openViet()">Other</button>
               </div>
               <div id="displayProduct" class="displayProd"></div>
               <br/>
