@@ -11,13 +11,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
-    <link href="styles/style.css" rel="stylesheet" type="text/css">
+    <link href="styles/contact.css" rel="stylesheet" type="text/css">
+    <!-- <link href="styles/style.css" rel="stylesheet" type="text/css"> -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="https://cdn.lordicon.com/libs/mssddfmo/lord-icon-2.1.0.js"></script>
 </head>
 
   <body>
@@ -45,54 +47,73 @@
         </div>
     </nav>
       
-    <div class="slideshow-container">
-    
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img src="images/heroImage.png" style="width:100%">
+   
+
+    <div class="SS18-container" align="center" width="100%" >
+      <div class="SS18-container2">
+          <a id="SS18-anchor" class="SS18-first" href="" >
+           <figure class="SS18-figure">
+            <img class="SS18-figureimg" src="https://cdn.shopify.com/s/files/1/0987/0940/files/Banner_3images_620px_867px4.jpg" alt="" class="banimg" >
+            <figcaption class="SS18-caption">
+                  <h1>AW/18</h1>
+                  <h4>LIGHTWEIGHT JACKETS</h4>
+              <div align="center">
+              <img class="chevimg" src="" alt="" width="18vW" >
+              </div>
+              <div class="cta4">
+                <h5>SHOP NOW</h5>
+              </div>  
+                </figcaption>
+          </figure>
+        </a>
+         </div> 
+        <div class="SS18-container2" >
+        <a id="SS18-anchor" class="SS18-second" href="" >
+           <figure class="SS18-figure">
+            <img class="SS18-figureimg" src="images/mountaintop.jpeg" alt="" class="banimg" >
+            <figcaption class="SS18-caption">
+                  <h1>Contact-Us</h1>
+                  <h4>Anytime</h4>
+              <div align="center">
+                <lord-icon
+                  src="https://cdn.lordicon.com/zpxybbhl.json"
+                  trigger="loop"
+                  colors="primary:#121331,secondary:#08a88a"
+                  style="width:80px;height:80px">
+              </lord-icon>
+              <!-- <img class="chevimg" src="https://img.icons8.com/ios-filled/100/000000/phone.png" alt="" width="18vW" > -->
+              </div>
+              <div class="cta4">
+                <h5>SHOP NOW</h5>
+              </div>  
+                </figcaption>
+            
+          </figure>
+        </a>
+        </div>  
+        <div class="SS18-container2">
+       <a id="SS18-anchor" class="SS18-third" href="" >
+          <figure class="SS18-figure">
+            <img class="SS18-figureimg" src="https://cdn.shopify.com/s/files/1/0987/0940/files/Banner_3images_620px_867px6.jpg" alt="" class="banimg" >
+            <figcaption class="SS18-caption">
+                  <h1>AW/18</h1>
+                  <h4>NEW DENIM</h4>
+              <div align="center">
+              <img class="chevimg" src="https://cdn.shopify.com/s/files/1/0987/0940/files/CHEVRON-White1_91244682-d1ce-4b85-b0ad-fdf542056086.svg" alt="" width="18vW" >
+              </div>
+              <div class="cta4">
+                <h5>SHOP NOW</h5>
+              </div>  
+                </figcaption>
+            
+          </figure>
+        </a>
+         </div> 
       </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img src="images/mountains.png" style="width:100%">
-      </div>
-      
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img src="images/hike.png" style="width:100%">
-      </div>
-      
-      <a class="prev" style="color:white;" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" style="color:white;"onclick="plusSlides(1)">&#10095;</a>
-    </div>
-      <br>
-  
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span> 
-        <span class="dot" onclick="currentSlide(2)"></span> 
-        <span class="dot" onclick="currentSlide(3)"></span> 
-      </div>
-    <script>
-      var slideIndex = 0;
-      showSlides();
-  
-      function showSlides() {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}    
-      for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 2000); // Change image every 2 seconds
-    }
-    </script> 
+
+
+
+
     <div class="footer-container">
       <div class="footer">
           <div class="footer-heading footer-1">

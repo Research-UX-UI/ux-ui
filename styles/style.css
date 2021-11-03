@@ -90,6 +90,180 @@ h3{
   box-sizing:border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.SS18-container{
+  height:100%;
+ overflow:auto;
+ width: 100%;
+ 
+}
+
+
+#SS18-anchor {
+     overflow: hidden;
+     display: inline-block;
+     width: calc(33.33% -  1.0416666666666667vW);
+     max-width:620px;
+     /* max-height: fit-content; */
+     height:min-content;
+     float: left;
+}
+
+.SS18-first {
+     margin-top: 0.78125vW;
+     margin-bottom: 0.78125vW;
+     margin-left: 0.78125vW;
+     margin-right:0.36458333333333337vW; 
+}
+
+.SS18-second {
+     margin-top: 0.78125vW;
+     margin-bottom: 0.78125vW;
+     margin-left:0.36458333333333337vW;
+     margin-right:0.36458333333333337vW; 
+     height: 100px;
+}
+
+.SS18-third {
+     margin-top: 0.78125vW;
+     margin-bottom: 0.78125vW;
+     margin-left:0.36458333333333337vW;
+     margin-right: 0.78125vW;
+}
+
+.SS18-caption h1 {
+     font-size: 2vW;
+     font-weight:300;
+     line-height:1vW;
+     color: #ffffff;
+     letter-spacing:0.1vw;
+     text-transform: uppercase;
+     font-family: 'Open Sans', sans-serif;
+}
+
+.SS18-caption h4 {
+     font-size: 1vW;
+     font-weight:300;
+     letter-spacing:0.1vw;
+     text-transform: uppercase;
+     font-family: 'Open Sans', sans-serif;
+}
+
+.SS18-caption h5 {
+     font-size: 0.65vW;
+     font-weight:300;
+     letter-spacing:0.1vw;
+     text-transform: uppercase;
+     margin-top:16.5vW;
+     font-family: 'Open Sans', sans-serif;
+}
+
+.SS18-container figure {
+     position: relative;
+     background-color: #000;
+}
+
+.SS18-figureimg {
+     width: 100%;
+     display: block;
+     position: relative;
+}
+
+.SS18-container figcaption {
+     position: absolute;
+     top: 35%;
+     left: 0;
+     width: 100%;
+     text-align: center;
+     opacity: 0;
+     color: #fff;
+}
+
+.SS18-figureimg {
+     opacity: 0.5;
+     height: 300px;
+     -webkit-transition: all .8s ease;
+     -moz-transition: all .8s ease;
+     transition: all .8s ease;
+}
+
+.SS18-container figure  figcaption{
+     opacity: 1;
+}
+
+#SS18-anchor:hover .SS18-figureimg {
+     transform: scale(1.15);
+  opacity: 0.4;
+     -webkit-transition: all .8s ease;
+     -moz-transition: all .8s ease;
+     transition: all .8s ease;
+}
+
+.SS18-figure {
+     margin: 0;
+}
+
+@media only screen and (max-width: 480px) {
+
+#SS18-anchor {
+     display: block;
+     width: calc(100% -  6.25vw);
+}
+
+.SS18-first {
+     margin-left:3.125vw ;
+     margin-right:3.125vw ;
+     margin-top: 3.125vw;
+     margin-bottom: 1.4583333333333335vw; 
+}
+
+.SS18-second {
+     margin-left:3.125vw ;
+     margin-right:3.125vw ;
+     margin-top: 1.4583333333333335vw;
+     margin-bottom: 1.4583333333333335vw;  
+}
+
+.SS18-third {
+     margin-left:3.125vw ;
+     margin-right:3.125vw ;
+     margin-top: 1.4583333333333335vw;
+     margin-bottom: 3.125vw; 
+} 
+
+.SS18-caption h1 {
+     font-size: 6vW;
+     font-weight:300;
+     line-height:3vW;
+     font-color: blue;
+     letter-spacing:0.3vw;
+     text-transform: uppercase;
+     font-family: 'Open Sans', sans-serif;
+}
+
+.SS18-caption h4 {
+     font-size: 3vW;
+     font-weight:300;
+     letter-spacing:0.3vw;
+     text-transform: uppercase;
+     font-family: 'Open Sans', sans-serif;
+}
+
+.SS18-caption h5 {
+     font-size: 2vW;
+     font-weight:300;
+     letter-spacing:0.3vw;
+     margin-top:50vW;
+     text-transform: uppercase;
+     font-family: 'Open Sans', sans-serif;
+} 
+}
+
+
+
+
+
 .footer-container{
   background-color:#212329;
   padding:4rem 0 2rem 0;
