@@ -1,122 +1,170 @@
-
 const selectedRestrictions = new Set()
 
 var products = [
 	{
 		name: "Brocoli",
-		picture: "images/broccoli.jpeg",
+		picture: "pictures/brocoli.jpg",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
+		type : "Vegetable",
 		price: 2.00
 	},
 	{
 		name: "Bread",
-		picture: "images/bread.jpeg",
+		picture: "pictures/bread.jpg",
 		LactoseFree: false,
 		NutFree: false,
 		isOrganic:true,
-		price: 2.50
+		type : "Carbs",
+		price: 2.00
 	},
 	{
 		name: "Tomato",
-		picture: "images/tomato.jpeg",
+		picture: "pictures/tomato.jpg",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
+		type : "Vegetable",
 		price: 4.00
 	},
 	{
 		name: "Organic Cheese",
-		picture: "images/organiccheese.png",
+		picture: "pictures/organic_cheese.jpg",
 		LactoseFree: false,
 		NutFree: true,
 		isOrganic:true,
+		type : "Dairy",
 		price: 3.50
 	},
 	{
 		name: "Cheese",
-		picture: "images/cheese.jpeg",
+		picture: "pictures/cheese.jpg",
 		LactoseFree: false,
 		NutFree: true,
 		isOrganic:false,
+		type : "Dairy",
 		price: 2.50
 	},
 	{
 		name: "Salmon",
-		picture: "images/salmon.jpeg",
+		picture: "pictures/salmon.jpg",
 		LactoseFree: true,
 		NutFree: true,
-		isOrganic:false,
+		isOrganic:true,
+		type : "Protein",
 		price: 10.00
 	},
 	{
 		name: "Apple",
-		picture: "images/apple.jpeg",
+		picture: "pictures/apple.jpg",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:false,
-		price: 1.50
+		type : "Fruit",
+		price: 1.70
 	},
 	{
 		name: "Milk",
-		picture: "images/milk.jpeg",
+		picture: "pictures/milk.jpg",
 		LactoseFree: false,
 		NutFree: true,
 		isOrganic:true,
+		type : "Dairy",
 		price: 8.50
 	},
 	{
 		name: "Almonds",
-		picture: "images/almonds.jpeg",
+		picture: "pictures/almonds.jpg",
 		LactoseFree: true,
 		NutFree: false,
 		isOrganic:true,
+		type : "Fat",
 		price: 2.00
 	},
 	{
 		name: "Rice",
-		picture: "images/rice.jpeg",
+		picture: "pictures/rice.jpg",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:false,
+		type : "Carbs",
 		price: 13.00
 	},
 	{
 		name: "Honey",
-		picture: "images/honey.jpeg",
+		picture: "pictures/honey.jpg",
 		LactoseFree: true,
 		NutFree: false,
 		isOrganic:false,
-		price: 6.00
+		type : "Fat",
+		price: 4.00
 	},
 	{
 		name: "Avacado",
-		picture: "images/avocado.jpeg",
+		picture: "pictures/avocado.jpg",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:false,
+		type : "Fruit",
 		price: 4.00
 	},
 	{
 		name: "Strawberry",
-		picture: "images/strawberry.jpeg",
-
+		picture: "pictures/strawberry.jpg",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
-		price: 2.00
+		type : "Fruit",
+		price: 2.50
 	},
 	{
 		name: "Banana",
-		picture: "images/banana.jpeg",
+		picture: "pictures/banana.jpg",
 		LactoseFree: true,
 		NutFree: true,
 		isOrganic:true,
+		type : "Fruit",
 		price: 1.50
 	},
+	{
+		name: "Pho",
+		picture: "pictures/pho.jpg",
+		LactoseFree: true,
+		NutFree: true,
+		isOrganic:true,
+		type : "Vietnamese",
+		price: 9.50
+	},
+	{
+		name: "Cha Ca",
+		picture: "pictures/chaca.jpg",
+		LactoseFree: true,
+		NutFree: true,
+		isOrganic:true,
+		type : "Vietnamese",
+		price: 7.50
+	},
+	{
+		name: "Cao Lau",
+		picture: "pictures/caolau.jpg",
+		LactoseFree: true,
+		NutFree: true,
+		isOrganic:true,
+		type : "Vietnamese",
+		price: 10.50
+	},
+	{
+		name: "Banh khot",
+		picture: "pictures/banhkhot.jpg",
+		LactoseFree: true,
+		NutFree: true,
+		isOrganic:true,
+		type : "Vietnamese",
+		price: 14.00
+	},
 ];
-	
+
 
 function restrictListProducts(prods) {
 	let filteredProducts = [];

@@ -8,17 +8,18 @@
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="selection.js"></script>
+    <script src="categories.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>     -->
     <link href="styles/adv.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="scripts/main.js"></script>
+    
+    
 </head>
 
 <body>
@@ -137,66 +138,124 @@
              <br/>   
           </p>
           </div>
+
           <div class="tab" >
-            <button class="tablinks" onclick="openInfo(event, 'Client')">CATEGORIES</button>
-            <button class="tablinks" onclick="openInfo(event, 'Products')">ACTIVITIES</button>
-            <button class="tablinks" onclick="openInfo(event, 'Cart')">TOTAL</button>
+            <h1>The Corner Store</h1>
+            <button class="tablinks" onclick="openInfo(event, 'Client')">Personal Info</button>
+            <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+            <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
           </div>
-          <div id="Client" class="tabcontent">
-            <div id="info" class="style">
-              <h4>Categories listing</h4><br>
-              <b>Tell us a bit about your adventure needs:</b> <br>
-            </br>
-            </div>
-            <label class="option_item">
-              <input type="checkbox" class="checkbox" id="lactose-free" name="lactose-free" value="Lactose-Free" onchange="populateListProductChoices(this.id)">
-              <div class="option_inner lactosefree">
-                <div class="image"><img src="images/lactosefree.jpeg" alt=""></div>
-                <div class="text">
-                  <h2>Extreme Sports</h2>
-                </div>
+          <div class="wrapper">
+            <div id="homepage" class="tabcontent">
+              <div id="info" class="introduction">
+                <h3>THE CORNER STORE</h3>
+                <br>
+                <p>
+                  Please use the 3 options provided in the menu to set your personal restrictions, choose items and check your cart. Thank you!
+                </p>
               </div>
-            </label>
-            <label class="option_item">
-              <input type="checkbox" class="checkbox" id="nut-free" name="nut-free" value="Nut-Free" onchange="populateListProductChoices(this.id)">
-              <div class="option_inner nutfree">
-                <div class="image"><img src="images/nutfree.jpeg" alt=""></div>
-                <div class="text">
-                  <h2>Land Sports</h2>
-                </div>
-              </div>
-            </label>
-            <label class="option_item">
-              <input type="checkbox" class="checkbox" id="organic" name="organic" value="Organic" onchange="populateListProductChoices(this.id)">
-              <div class="option_inner organic">
-                <div class="image"><img src="images/organic.jpeg" alt=""></div>
-                <div class="text">
-                  <h2>Water Sports</h2>
-                </div>
-              </div>
-            </label>
-          </div>
-        
-          <div id="Products" class="tabcontent">
-            <div id="prod" class="style">
-              <h3>We preselected activities based on your preference </h3><br>
-                Choose items to buy:
             </div>
-          <div id="displayProduct" class="displayProd"></div>
-           <br/>
-           <button id="addCart" type="button" onclick="selectedItems()">
-            <b>Add selected items to cart</b>
-          </button>
-          </div>
-        
-          <div id="Cart" class="tabcontent">
-            <div class="style">
-              <h3>Here is your cart</h3>  
-              <div id="displayCart"></div>
+            <div id="Client" class="tabcontent">
+              <div id="info" class="introduction">
+                <h3>Client Information</h3>
+                <br>
+                <p>
+                  Do you have any food
+                  <br>
+                   restrictions?
+                </p>
+                <br>
+                <b>Choose a Category:</b>
+                <p>
+                  <small>
+                    (if you have no restrictions move on to products)
+                  </small>
+                </p>
+              </div>
+              <div class="restrict">
+                <label class="option_item">
+                  <input type="checkbox" class="checkbox" id="lactose-free" name="lactose-free" value="Lactose-Free" onchange="populateListProductChoices(this.id)">
+                  <div class="option_inner lactosefree">
+                    <div class="icon">
+                      <img src="pictures/lactosefree.jpg" alt="">
+                    </div>
+                    <div class="tickmark"></div>
+                    <div class="boxtext">
+                      <h2>Lactose-Free</h2>
+                    </div>
+                  </div>
+                </label>
+                <label class="option_item">
+                  <input type="checkbox" class="checkbox" id="nut-free" name="nut-free" value="Nut-Free" onchange="populateListProductChoices(this.id)">
+                  <div class="option_inner nutfree">
+                    <div class="icon">
+                      <img src="pictures/nutfree.jpg" alt="">
+                    </div>
+                    <div class="tickmark"></div>
+                    <div class="boxtext">
+                      <h2>Nut-Free</h2>
+                    </div>
+                  </div>
+                </label>
+                <label class="option_item">
+                  <input type="checkbox" class="checkbox" id="organic" name="organic" value="Organic" onchange="populateListProductChoices(this.id)">
+                  <div class="option_inner organic">
+                    <div class="icon">
+                      <img src="pictures/organic.jpg" alt="">
+                    </div>
+                    <div class="tickmark"></div>
+                    <div class="boxtext">
+                      <h2>Organic</h2>
+                    </div>
+                  </div>
+                </label>
+              </div>
+              <button id="selectrestrictions" type="button" class="block" onclick="selectedRes()"><b>Select your current restrictions</b></button>
             </div>
-            <br>
+            <div id="Products" class="tabcontent">
+              <div id="prod" class="introduction">
+                <h3>Your targeted products</h3>
+                <br>
+                <p>
+                  We preselected products based on your restrictions
+                </p>
+                <p>
+                  Choose items to buy:
+                </p>
+              </div>
+              <br>
+              <div class="tab" >
+                <button class="tablinks" onclick="openAll()">All Products</button>
+                <button class="tablinks" onclick="openFruits()">Fruits</button>
+                <button class="tablinks" onclick="openVeg()">Vegetables</button>
+                <button class="tablinks" onclick="openDairy()">Dairy</button>
+                <button class="tablinks" onclick="openProtein()">Proteins</button>
+                <button class="tablinks" onclick="openFat()">Fats</button>
+                <button class="tablinks" onclick="openCarbs()">Carbs</button>
+                <button class="tablinks" onclick="openViet()">Vietnamese Food Delivery</button>
+              </div>
+              <div id="displayProduct" class="displayProd"></div>
+              <br/>
+              <button id="addCart" type="button" class="block" onclick="selectedItems()"><b>Add selected items to cart</b></button>
+            </div>
+            <div id="Cart" class="tabcontent">
+              <div id="checkout" class="introduction">
+                <h3>
+                  Cart
+                  <br>
+                  <img src="pictures/cart.png" alt="">
+                </h3>
+                <p>
+                  Here is your cart.
+                </p>
+                <div id="displayCart"></div>
+              </div>
+              <br>
+            </div>
           </div>
-        </div>
+          <script src="scripts/selection.js"></script>
+          <script src="scripts/categories.js"></script>
+          
      </main>
 
 
@@ -206,7 +265,7 @@
             <div class="footer-heading footer-1">
                 <h2>Quick Links</h2>
                 <a href="index.html">Main Page</a>
-                <a href="adventures.html">Adventures</a>
+                <a href="adventure.html">Adventures</a>
                 <a href="survey.html">Survey</a>
                 <a href="pricing.html">Pricing</a> 
                 <a href="contact.html">Contact Us!</a>
@@ -228,8 +287,7 @@
             </p>
         </div>
       </div>
-      <script src="scripts/selection.js"></script>
-      <script src="scripts/main.js"></script>
+    
   </body>
 
  </html>
