@@ -204,7 +204,6 @@ function renderProductList(optionArray){
 	  checkbox.value = productName;
 
 		label.appendChild(checkbox);
-		formattedPrice = (Math.round(productPrice * 100) / 100).toFixed(2);
 
 		var optioninner = document.createElement("div");
 		optioninner.className = "option_inner nutfree";
@@ -219,7 +218,7 @@ function renderProductList(optionArray){
 		var prodtext = document.createElement("div");
 		prodtext.className = "boxtext";
 		var h2 = document.createElement("h2");
-		h2.appendChild(document.createTextNode(`${productName} - $${formattedPrice}`));
+		h2.appendChild(document.createTextNode(`${productName}`));
 		prodtext.appendChild(h2);
 		optioninner.appendChild(icon);
 		optioninner.appendChild(tick);
