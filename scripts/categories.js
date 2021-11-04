@@ -101,7 +101,7 @@ function selectedItems(){
 	c.innerHTML = "";
 
 	var para = document.createElement("P");
-	para.innerHTML = "You have selected:";
+	para.innerHTML = "You have selected the following activities:";
 	para.appendChild(document.createElement("br"));
 	for (i = 0; i < ele.length; i++) {
 		if (ele[i].checked) {

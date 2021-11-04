@@ -49,11 +49,11 @@
         <div class="content-wrapper">
             <h2>ADVENTURES</h2>
             <p class="first_paragraph">
-               <b>NEED TO ADD A BIT MORE Adventures TO YOUR UNI LIFE?</b>
+               <b>NEED TO ADD A BIT MORE ADVENTURES TO YOUR UNI LIFE?</b>
                <br/>
                We have a wide range of adventures that fits all your needs! 
                <br/>
-               All you have to do is to insert choose your preferences in our quick survey
+               All you have to do is to choose your preferences in our survey
                <br/> 
                and with a simple click your next adventure will be selected.
                <br/>   
@@ -66,7 +66,7 @@
 
                 <div class="profile-content-wrapper">
                     <h3>Niagra Falls</h3>
-                    <p> Niagara Falls, Ontario, is a Canadian city at the famous waterfalls of the same name, linked with the U.S. by the Rainbow Bridge. Its site on the Niagara River's western shore overlooks the Horseshoe Falls, the cascades' most expansive section. Elevators take visitors to a lower, wetter vantage point behind the falls. A cliffside park features a promenade alongside 520-ft.-high Skylon Tower with an observation deck.
+                    <p> Niagara Falls, Ontario, is a Canadian city at the famous waterfalls of the same name, linked with the U.S. by the Rainbow Bridge. Its site on the Niagara River's western shore overlooks the Horseshoe Falls, the cascades' most expansive section. Elevators take visitors to a lower, wetter vantage point behind the falls. 
                     </p>
                 </div>
 
@@ -75,6 +75,7 @@
                     <p> Banff National Park is Canada's oldest national park, established in 1885. Located in Alberta's Rocky Mountains, 110–180 kilometres west of Calgary, Banff encompasses 6,641 square kilometres of mountainous terrain, with many glaciers and ice fields, dense coniferous forest, and alpine landscapes.
                     </p>
                 </div>
+
                 <div class="profile-image-wrapper">
                     <img src="images/banff.png" alt="picture">
                 </div>
@@ -86,15 +87,13 @@
                 <div class="profile-content-wrapper">
                     <h3>Whistler</h3>
                     <p> Whistler is Canada’s world-famous ski village. Upheld at the feet of Mount Whistler and Mount Blackcomb, this international winter sports zone is the largest in North America and co-hosted the Winter Olympics 2010 and Vancouver.
-
-                      These vast mountains have some of the best skiing and boarding slopes on the earth, and you should not miss all winter sports over here! This village provides a wide range of accommodations from the mid-range lodge to high-range luxurious resorts. There are many restaurants, shops, and galleries in this area for tourists to enjoy.
                     </p>
                 </div>
 
                 <!--the fourth-->
                 <div class="profile-content-wrapper">
                     <h3>Mont-Tremblant</h3>
-                    <p> Mont-Tremblant is a municipality in the Canadian province Québec, set within the Laurentian Mountains, northwest of Montréal. The year-round Mont-Tremblant Ski Resort, on the shores of Lake Tremblant, features acclaimed winter sports, golf courses and a pedestrian shopping village. North of town, expansive Mont-Tremblant National Park offers forested hiking trails and lakes for canoeing, along with winter activities.
+                    <p> Mont-Tremblant is a municipality in the Canadian province Québec, set within the Laurentian Mountains, northwest of Montréal. North of town, expansive Mont-Tremblant National Park offers forested hiking trails and lakes for canoeing, along with winter activities.
                     </p>
                 </div>
                 <div class="profile-image-wrapper">
@@ -107,7 +106,7 @@
                </div>
                <div class="profile-content-wrapper">
                    <h3>Gros Morne National Park</h3>
-                   <p> Gros Morne National Park is our next pick for the travel lovers, and this place is listed as a UNESCO World Heritage Site for its complex geology. This is the second-largest national park in eastern Canada, and the area covers 1, 1805 sq. Km. of western Newfoundland. This massive park contains 2,000 feet tall cliffs, some of the highest waterfalls in Canada, draft forests, sand beaches, and rock pools.
+                   <p> Gros Morne National Park is our next pick for the travel lovers, and this place is listed as a UNESCO World Heritage Site for its complex geology. This is the second-largest national park in eastern Canada, and the area covers 1, 1805 sq. Km. of western Newfoundland. 
                    </p>
                </div> 
                   
@@ -136,7 +135,8 @@
             <button class="tablinks" onclick="openInfo(event, 'Products')">Activities</button>
             <button class="tablinks" onclick="openInfo(event, 'Cart')">Register</button>
           </div>
-          <div class="wrapper">
+
+        <div class="wrapper">
             <div id="homepage" class="tabcontent">
               <div id="info" class="introduction">
                 <h1 style="font-size: 30px;">UniLife</h1>
@@ -146,6 +146,7 @@
                 </p>
               </div>
             </div>
+
             <div id="Client" class="tabcontent">
               <div id="info" class="introduction">
                 <h2>Trip informations</h2>
@@ -161,6 +162,7 @@
                   </small>
                 </p>
               </div>
+
               <div class="restrict">
                 <label class="option_item">
                   <input type="checkbox" class="checkbox" id="niagra" name="niagra" value="niagra" onchange="populateListProductChoices(this.id)">
@@ -187,6 +189,7 @@
                     </div>
                   </div>
                 </label>
+
                 <label class="option_item">
                   <input type="checkbox" class="checkbox" id="whistler" name="whistler" value="whistler" onchange="populateListProductChoices(this.id)">
                   <div class="option_inner organic">
@@ -199,6 +202,7 @@
                     </div>
                   </div>
                 </label>
+
                 <label class="option_item">
                   <input type="checkbox" class="checkbox" id="tremblant" name="tremblant" value="tremblant" onchange="populateListProductChoices(this.id)">
                   <div class="option_inner organic">
@@ -211,6 +215,7 @@
                     </div>
                   </div>
                 </label>
+
                 <label class="option_item">
                   <input type="checkbox" class="checkbox" id="morne" name="morne" value="morne" onchange="populateListProductChoices(this.id)">
                   <div class="option_inner organic">
@@ -223,8 +228,10 @@
                     </div>
                   </div>
                 </label>
+                
               </div>
-              <button id="selectrestrictions" type="button" class="block" onclick="selectedRes()"><b>Select your current preferences</b></button>
+              <br/>
+              <button id="selectrestrictions" type="button"  onclick="selectedRes()"><b>Select your current preferences</b></button>
             </div>
 
             <div id="Products" class="tabcontent">
@@ -246,16 +253,16 @@
               <br/>
               <button id="addCart" type="button" class="block" onclick="selectedItems()"><b>Add selected items to cart</b></button>
             </div>
+
+
             <div id="Cart" class="tabcontent">
               <div id="checkout" class="introduction">
                 <h3>
-                  Cart
+                  Result
                   <br>
                   <img src="pictures/cart.png" alt="">
                 </h3>
-                <p>
-                  Here is your cart.
-                </p>
+                
                 <div id="displayCart"></div>
               </div>
               <br>
