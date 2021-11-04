@@ -1,13 +1,10 @@
 const allItems = restrictListProducts(products)
 renderProductList(allItems)
 
-var pro = document.getElementsByClassName("Proteins");
-var fruits = document.getElementsByClassName("Fruits");
-var veg = document.getElementsByClassName("Vegetables");
-var dairy = document.getElementsByClassName("Dairy");
-var fats = document.getElementsByClassName("Fats");
-var carbs = document.getElementsByClassName("Carbs");
-var viet = document.getElementsByClassName("Vietnamese");
+var water = document.getElementsByClassName("waters");
+var land = document.getElementsByClassName("lands");
+var extreme = document.getElementsByClassName("extremes");
+
 
 function openInfo(evt, tabName) {
 
@@ -35,7 +32,6 @@ function openInfo(evt, tabName) {
 function populateListProductChoices(slct1) {
     var s1 = document.getElementById(slct1);
     var s2 = document.getElementById('displayProduct');
-
     s2.innerHTML = "";
 
 	if (selectedRestrictions.has(s1.value)) {
@@ -62,71 +58,37 @@ function openAll(){
 	}
 }
 
-function openFruits() {
+function openWater() {
 	hideElems();
-	for (var i = 0; i < fruits.length; i++) {
-		fruits[i].style.display = "flex";
+	for (var i = 0; i < water.length; i++) {
+		water[i].style.display = "flex";
 	}
 }
 
-function openVeg() {
+function openLand() {
 	hideElems();
-	for (var i = 0; i < veg.length; i++) {
-		veg[i].style.display = "flex";
+	for (var i = 0; i < land.length; i++) {
+		land[i].style.display = "flex";
 	}
 }
 
-function openDairy() {
+function openExtreme() {
 	hideElems();
-	for (var i = 0; i < dairy.length; i++) {
-		dairy[i].style.display = "flex";
+	for (var i = 0; i < extreme.length; i++) {
+		extreme[i].style.display = "flex";
 	}
 }
-
-function openProtein() {
-	hideElems();
-	for (var i = 0; i < pro.length; i++) {
-		pro[i].style.display = "flex";
-	}
-}
-
-function openFat() {
-	hideElems();
-	for (var i = 0; i < fats.length; i++) {
-		fats[i].style.display = "flex";
-	}
-}
-
-function openViet() {
-	hideElems();
-	for (var i = 0; i < viet.length; i++) {
-		viet[i].style.display = "flex";
-	}
-}
-
 
 
 function hideElems() {
-	for (var i = 0; i < fruits.length; i++) {
-		fruits[i].style.display = "none";
+	for (var i = 0; i < water.length; i++) {
+		water[i].style.display = "none";
 	}
-	for (var i = 0; i < veg.length; i++) {
-		veg[i].style.display = "none";
+	for (var i = 0; i < land.length; i++) {
+		land[i].style.display = "none";
 	}
-	for (var i = 0; i < pro.length; i++) {
-		pro[i].style.display = "none";
-	}
-	for (var i = 0; i < dairy.length; i++) {
-		dairy[i].style.display = "none";
-	}
-	for (var i = 0; i < fats.length; i++) {
-		fats[i].style.display = "none";
-	}
-	for (var i = 0; i < carbs.length; i++) {
-		carbs[i].style.display = "none";
-	}
-	for (var i = 0; i < viet.length; i++) {
-		viet[i].style.display = "none";
+	for (var i = 0; i < extreme.length; i++) {
+		extreme[i].style.display = "none";
 	}
 }
 
@@ -150,7 +112,6 @@ function selectedItems(){
 	}
 
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is: " + getTotalPrice(chosenProducts)+" $"));
 
 	openInfo(event, "Cart");
 
@@ -175,27 +136,16 @@ function renderProductList(optionArray){
 
 		var type = document.createElement('div');
 		type.title = "type";
-		if (productType == "Fruit") {
-			type.className = "Fruits";
+		if (productType == "water") {
+			type.className = "waters";
 		}
-		if (productType == "Vegetable") {
-			type.className = "Vegetables";
+		if (productType == "land") {
+			type.className = "lands";
 		}
-		if (productType == "Fat") {
-			type.className = "Fats";
+		if (productType == "extreme") {
+			type.className = "extremes";
 		}
-		if (productType == "Protein") {
-			type.className = "Proteins";
-		}
-		if (productType == "Carbs") {
-			type.className = "Carbs";
-		}
-		if (productType == "Dairy") {
-			type.className = "Dairy";
-		}
-		if (productType == "Vietnamese") {
-			type.className = "Vietnamese";
-		}
+		
 
 	  var checkbox = document.createElement("input");
 	  checkbox.type = "checkbox";

@@ -47,7 +47,6 @@
     
       <main>
         <div class="content-wrapper">
-            <p class="para1">our</p>
             <h2>ADVENTURES</h2>
             <p class="first_paragraph">
                <b>NEED TO ADD A BIT MORE Adventures TO YOUR UNI LIFE?</b>
@@ -117,7 +116,7 @@
         <div class="content-wrapper">
           <p class="para1"></p>
           <p class="first_paragraph">
-          <h2>SURVEY</h2>
+          <h2>INTERACTIVE SURVEY</h2>
           <p class="first_paragraph">
              <b>NEED TO ADD A BIT MORE ADVENTURES TO SPICE UP YOUR LIFE?</b>
              <br/>
@@ -133,7 +132,6 @@
           
 
           <div class="tab" >
-            <h2 style="font-size:30px">INTERACTIVE SURVEY</h2>
             <button class="tablinks" onclick="openInfo(event, 'Client')">Trips</button>
             <button class="tablinks" onclick="openInfo(event, 'Products')">Activities</button>
             <button class="tablinks" onclick="openInfo(event, 'Cart')">Register</button>
@@ -165,7 +163,7 @@
               </div>
               <div class="restrict">
                 <label class="option_item">
-                  <input type="checkbox" class="checkbox" id="lactose-free" name="lactose-free" value="Lactose-Free" onchange="populateListProductChoices(this.id)">
+                  <input type="checkbox" class="checkbox" id="niagra" name="niagra" value="niagra" onchange="populateListProductChoices(this.id)">
                   <div class="option_inner lactosefree">
                     <div class="icon">
                       <img src="images/niagra.png" alt="">
@@ -176,8 +174,9 @@
                     </div>
                   </div>
                 </label>
+
                 <label class="option_item">
-                  <input type="checkbox" class="checkbox" id="nut-free" name="nut-free" value="Nut-Free" onchange="populateListProductChoices(this.id)">
+                  <input type="checkbox" class="checkbox" id="banff" name="banff" value="banff" onchange="populateListProductChoices(this.id)">
                   <div class="option_inner nutfree">
                     <div class="icon">
                       <img src="images/banff.png" alt="">
@@ -189,7 +188,7 @@
                   </div>
                 </label>
                 <label class="option_item">
-                  <input type="checkbox" class="checkbox" id="organic" name="organic" value="Organic" onchange="populateListProductChoices(this.id)">
+                  <input type="checkbox" class="checkbox" id="whistler" name="whistler" value="whistler" onchange="populateListProductChoices(this.id)">
                   <div class="option_inner organic">
                     <div class="icon">
                       <img src="images/bc.jpeg" alt="">
@@ -201,7 +200,7 @@
                   </div>
                 </label>
                 <label class="option_item">
-                  <input type="checkbox" class="checkbox" id="organic" name="organic" value="Organic" onchange="populateListProductChoices(this.id)">
+                  <input type="checkbox" class="checkbox" id="tremblant" name="tremblant" value="tremblant" onchange="populateListProductChoices(this.id)">
                   <div class="option_inner organic">
                     <div class="icon">
                       <img src="images/tremblant.jpeg" alt="">
@@ -213,7 +212,7 @@
                   </div>
                 </label>
                 <label class="option_item">
-                  <input type="checkbox" class="checkbox" id="organic" name="organic" value="Organic" onchange="populateListProductChoices(this.id)">
+                  <input type="checkbox" class="checkbox" id="morne" name="morne" value="morne" onchange="populateListProductChoices(this.id)">
                   <div class="option_inner organic">
                     <div class="icon">
                       <img src="images/nf.jpeg" alt="">
@@ -227,28 +226,22 @@
               </div>
               <button id="selectrestrictions" type="button" class="block" onclick="selectedRes()"><b>Select your current preferences</b></button>
             </div>
-            
+
             <div id="Products" class="tabcontent">
               <div id="prod" class="introduction">
-                <h3>Your targeted products</h3>
+                <h3>Your targeted activities</h3>
                 <br>
                 <p>
-                  We preselected products based on your restrictions
-                </p>
-                <p>
-                  Choose items to buy:
+                  We preselected activities based on your restrictions
                 </p>
               </div>
               <br>
               <div class="tab" >
                 <button class="tablinks" onclick="openAll()">All Activities</button>
-                <button class="tablinks" onclick="openFruits()">Water Sports</button>
-                <button class="tablinks" onclick="openVeg()">Land Sports</button>
-                <button class="tablinks" onclick="openDairy()">Mountain Sports</button>
-                <button class="tablinks" onclick="openProtein()">Winter Sports</button>
-                <button class="tablinks" onclick="openFat()">Summer Sports</button>
-                <button class="tablinks" onclick="openViet()">Other</button>
-              </div>
+                <button class="tablinks" onclick="openWater()">Water Sports</button>
+                <button class="tablinks" onclick="openLand()">Land Sports</button>
+                <button class="tablinks" onclick="openExtreme()">Extreme Sports</button>
+                </div>
               <div id="displayProduct" class="displayProd"></div>
               <br/>
               <button id="addCart" type="button" class="block" onclick="selectedItems()"><b>Add selected items to cart</b></button>
