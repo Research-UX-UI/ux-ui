@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>UniLife</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- <script src="selection.js"></script>
+    <script src="categories.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>     -->
+    <link href="styles/adv.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="content-wrapper">
+    <p class="para1"></p>
+    <p class="first_paragraph">
+    <h2>INTERACTIVE SURVEY</h2>
+    <p class="first_paragraph">
+       <b>NEED TO ADD A BIT MORE ADVENTURES TO SPICE UP YOUR LIFE?</b>
+       <br/>
+       We have a wide range of adventures to fit all your needs! 
+       <br/>
+       All you have to do is to insert your preferences
+       <br/> 
+       and with a simple click your registration will be ready for you to enjoy.
+       <br/>   
+    </p>
+  </p>
+    </div>
+    
+
+    <div class="tab" >
+      <button class="tablinks" onclick="openInfo(event, 'Client')">Trips</button>
+      <button class="tablinks" onclick="openInfo(event, 'Products')">Activities</button>
+      <button class="tablinks" onclick="openInfo(event, 'Cart')">Register</button>
+    </div>
+
+  <div class="wrapper">
+      <div id="homepage" class="tabcontent">
+        <div id="info" class="introduction">
+          <h1 style="font-size: 30px;">UniLife</h1>
+          <br>
+          <p>
+            Please use the 5 options provided in the menu to set your personal prefernce for the available trips, choose activities and register now. Thank you!
+          </p>
+        </div>
+      </div>
+
+      <div id="Client" class="tabcontent">
+        <div id="info" class="introduction">
+          <h2>Trip informations</h2>
+          <br>
+          <p>
+            Do you have any trip preference?
+          </p>
+          <br>
+          <b>Choose a Category:</b>
+          <p>
+            <small>
+              (if you have no preferences move on to activities)
+            </small>
+          </p>
+        </div>
+
+        <div class="restrict">
+          <label class="option_item">
+            <input type="checkbox" class="checkbox" id="niagra" name="niagra" value="niagra" onchange="populateListProductChoices(this.id)">
+            <div class="option_inner lactosefree">
+              <div class="icon">
+                <img src="images/niagra.png" alt="">
+              </div>
+              <div class="tickmark"></div>
+              <div class="boxtext">
+                <h2>Niagra Falls</h2>
+              </div>
+            </div>
+          </label>
+
+          <label class="option_item">
+            <input type="checkbox" class="checkbox" id="banff" name="banff" value="banff" onchange="populateListProductChoices(this.id)">
+            <div class="option_inner nutfree">
+              <div class="icon">
+                <img src="images/banff.png" alt="">
+              </div>
+              <div class="tickmark"></div>
+              <div class="boxtext">
+                <h2>Banff</h2>
+              </div>
+            </div>
+          </label>
+
+          <label class="option_item">
+            <input type="checkbox" class="checkbox" id="whistler" name="whistler" value="whistler" onchange="populateListProductChoices(this.id)">
+            <div class="option_inner organic">
+              <div class="icon">
+                <img src="images/bc.jpeg" alt="">
+              </div>
+              <div class="tickmark"></div>
+              <div class="boxtext">
+                <h2>Whistler</h2>
+              </div>
+            </div>
+          </label>
+
+          <label class="option_item">
+            <input type="checkbox" class="checkbox" id="tremblant" name="tremblant" value="tremblant" onchange="populateListProductChoices(this.id)">
+            <div class="option_inner organic">
+              <div class="icon">
+                <img src="images/tremblant.jpeg" alt="">
+              </div>
+              <div class="tickmark"></div>
+              <div class="boxtext">
+                <h2>Mont-Tremblant</h2>
+              </div>
+            </div>
+          </label>
+
+          <label class="option_item">
+            <input type="checkbox" class="checkbox" id="morne" name="morne" value="morne" onchange="populateListProductChoices(this.id)">
+            <div class="option_inner organic">
+              <div class="icon">
+                <img src="images/nf.jpeg" alt="">
+              </div>
+              <div class="tickmark"></div>
+              <div class="boxtext">
+                <h2>Gros Morne</h2>
+              </div>
+            </div>
+          </label>
+          
+        </div>
+        <br/>
+        <button id="selectrestrictions" type="button"  onclick="selectedRes()"><b>Select your current preferences</b></button>
+      </div>
+
+      <div id="Products" class="tabcontent">
+        <div id="prod" class="introduction">
+          <h3>Your targeted activities</h3>
+          <br>
+          <p>
+            We preselected activities based on your restrictions
+          </p>
+        </div>
+        <br>
+        <div class="tab" >
+          <button class="tablinks" onclick="openAll()">All Activities</button>
+          <button class="tablinks" onclick="openWater()">Water Sports</button>
+          <button class="tablinks" onclick="openLand()">Land Sports</button>
+          <button class="tablinks" onclick="openExtreme()">Extreme Sports</button>
+          </div>
+        <div id="displayProduct" class="displayProd"></div>
+        <br/>
+        <button id="addCart" type="button" class="block" onclick="selectedItems()"><b>Add selected items to cart</b></button>
+      </div>
+
+
+      <div id="Cart" class="tabcontent">
+        <div id="checkout" class="introduction">
+          <h3>
+            Result
+            <br>
+            <img src="pictures/cart.png" alt="">
+          </h3>
+          
+          <div id="displayCart"></div>
+        </div>
+        <br>
+      </div>
+    </div>
+    <script src="scripts/selection.js"></script>
+    <script src="scripts/categories.js"></script>
+</body>
+</html>
+    
