@@ -10,9 +10,386 @@ body {
   .image{
     max-width: 8%;
   }
+  a {
+    color: #fff ;
+  }
+
   
+/* Navbar section */
+.nav {
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  height: 65px;
+  position: fixed;
+  line-height: 65px;
+  text-align: center;
+  z-index: 10;
+}
+
+.nav div.logo {
+  float: left;
+  width: auto;
+  height: auto;
+  padding-left: 0rem;
+  margin-left: 3rem;
+}
+
+.nav div.logo a {
+  text-decoration: none;
+  font-size: 2.2rem;
+}
+
+.nav div.logo a:hover {
+  color: #6495ED;
+}
+
+.nav div.main_list {
+  height: 40px;
+  float: right;
+}
+
+.nav div.main_list ul {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav div.main_list ul li {
+  width: auto;
+  height: 65px;
+  padding: 0px;
+  padding-right: 1rem;
+}
+
+.nav div.main_list ul li a {
+  text-decoration: none;
+  line-height: 30px;
+  font-size: 1.3rem;
+}
+
+
+.btn-outline-success:hover{
+  background-color: #6495ED ;
+  border-color: #6495ED !important;
+  color: #FFF !important;
+}
+
+.btn-outline-success{
+   border-color: #6495ED !important;
+   color: #FFF;
+}
+.btn-outline-success:visited{
+  background-color:#6495ED !important;
+  border-color: #6495ED !important ;
+  box-shadow: none !important;
+
+}
+
+.btn-outline-success:active{
+  border-color: #6495ED !important;
+  box-shadow: none !important;
+
+}
+
+.nav div.main_list ul li a:hover {
+  color:#6495ED;
+}
+
+
+.navTrigger {
+  display: none;
+}
+
+.nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+
+div.stroke ul li a{
+  position: relative;
+  padding-bottom: 3px;
+}
+div.stroke ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 2px;
+}
+div.stroke ul li a:hover:after {
+  width: 100%;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+      margin: 0;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .navTrigger {
+      display: block;
+  }
+  .nav div.logo {
+      margin-left: 0px;
+  }
+  .nav div.main_list {
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+  }
+  .nav div.show_list {
+      height: auto;
+      display: none;
+  }
+  .nav div.main_list ul {
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: #111;
+      /*same background color of navbar*/
+      background-position: center top;
+  }
+  .nav div.main_list ul li {
+      width: 100%;
+      text-align: right;
+  }
+  .nav div.main_list ul li a {
+      text-align: center;
+      width: 100%;
+      font-size: 3rem;
+      padding: 20px;
+      padding-left: 0%;
+  }
+  .nav div.media_button {
+      display: block;
+  }
+}
+
+
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  margin: auto;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  bottom: 0;
+}
+
+.navTrigger i {
+  background-color: #0000ff;
+  border-radius: 2px;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+}
+
+.navTrigger i:nth-child(1) {
+  -webkit-animation: outT 0.8s backwards;
+  animation: outT 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(2) {
+  margin: 5px 0;
+  -webkit-animation: outM 0.8s backwards;
+  animation: outM 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+  -webkit-animation: outBtm 0.8s backwards;
+  animation: outBtm 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+  -webkit-animation: inT 0.8s forwards;
+  animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+  -webkit-animation: inM 0.8s forwards;
+  animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+  -webkit-animation: inBtm 0.8s forwards;
+  animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+  50% {
+      -webkit-transform: rotate(0deg);
+  }
+  100% {
+      -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes inM {
+  50% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes outM {
+  50% {
+      -webkit-transform: rotate(0deg);
+  }
+  100% {
+      -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes outM {
+  50% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes inT {
+  0% {
+      -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+      -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes inT {
+  0% {
+      transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+      transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes outT {
+  0% {
+      -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+      -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes outT {
+  0% {
+      transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+      transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes inBtm {
+  0% {
+      -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+      -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@keyframes inBtm {
+  0% {
+      transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+      transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes outBtm {
+  0% {
+      -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+      -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@keyframes outBtm {
+  0% {
+      transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+      transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+      transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+.affix {
+  padding: 0;
+  background-color:#212329;
+  z-index:1; /*Add this*/
+}
+.affix2 {
+  color: #FFF;
+}  
     
-#navbar {
+/* #navbar {
   background: white;
   color: rgb(13, 26, 38);
   position: fixed;
@@ -48,7 +425,7 @@ body {
 } @media(max-width: 768px) {
     .logo {
 /*       margin-left: 5px; */
-    }
+    /* }
   }
 
 #navbar ul {
@@ -58,7 +435,7 @@ body {
   float: right;
   list-style: none;
   /* margin-right: 14px; */
-  margin-top: -2px;
+  /* margin-top: -2px;
   text-align: right;
   transition: transform 0.5s ease-out;
   -webkit-transition: transform 0.5s ease-out;
@@ -93,13 +470,13 @@ body {
 
 #navbar li a:hover {
   /* border-bottom: 1px solid rgb(28, 121, 184); */
-  color: rgb(28, 121, 184);
+  /* color: rgb(28, 121, 184);
   transition: all 1s ease;
   -webkit-transition: all 1s ease;
 }
 
 /* Animated Bottom Line */
-#navbar li a:before, #navbar li a:after {
+/* #navbar li a:before, #navbar li a:after {
   content: '';
   position: absolute;
   width: 0%;
@@ -117,7 +494,7 @@ body {
   background: rgb(13, 26, 38);
   right: 0;
   /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
-}
+/* }
 
 #navbar li a:hover:before {
   background: rgb(13, 26, 38);
@@ -129,7 +506,7 @@ body {
   background: transparent;
   width: 100%;
   /* transition: 0s; */
-}
+/* }    */ 
 
 
 .overlay-text {
@@ -401,7 +778,7 @@ h3{
   margin-bottom:0.5rem;
 }
 .footer-heading a:hover{
-  color:red;
+  color:#6495ED;
   transition: 0.3s ease-out;
 }
 .footer-email-form h2{
@@ -424,7 +801,7 @@ h3{
   width: 100px;
   height: 40px;
   border-radius: 4px;
-  background-color:#F9423D;
+  background-color:#6495ED;
   outline: none;
   border: none;
   color:#fff;
