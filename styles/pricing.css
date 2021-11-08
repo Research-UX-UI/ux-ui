@@ -130,7 +130,7 @@ div.stroke ul li a:after {
   width: 0%;
   content: '.';
   color: transparent;
-  background: #aaa;
+  background: white;
   height: 2px;
 }
 div.stroke ul li a:hover:after {
@@ -718,6 +718,7 @@ nav ul li a:before {
     }
     .btnn{
       background: #5029bc;
+      
     
     }
     .button input[type="button"]:hover{

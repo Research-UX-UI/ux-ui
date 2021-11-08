@@ -124,7 +124,7 @@ div.stroke ul li a:after {
   width: 0%;
   content: '.';
   color: transparent;
-  background: #aaa;
+  background: white;
   height: 2px;
 }
 div.stroke ul li a:hover:after {
