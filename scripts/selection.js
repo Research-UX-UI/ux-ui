@@ -266,3 +266,4 @@ function restrictListProducts(prods) {
 	}
 	return filteredProducts;
   }
+  
