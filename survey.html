@@ -13,15 +13,67 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>     -->
-    <link href="styles/adv.css" rel="stylesheet" type="text/css">
+    <link href="styles/survey.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
+  <nav class="nav">
+    <div class="container-fluid">
+        <div class="logo">
+            <a href="index.html"><i class="fa fa-globe" aria-hidden="true"></i> UniLife</a>
+        </div>
+        <div id="mainListDiv" class="main_list stroke">
+            <ul class="navlinks">
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="adventure.html">Adventures</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="btn btn-outline-success" href="register.html">Register</a></li>
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </span>
+    </div>
+
+    <script>
+      $('.navTrigger').click(function () {
+          $(this).toggleClass('active');
+          console.log("Clicked menu");
+          $("#mainListDiv").toggleClass("show_list");
+          $("#mainListDiv").fadeIn();
+
+      });
+    </script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+       <script src="js/scripts.js"></script>
+     <script>
+      $(window).scroll(function() {
+          if ($(document).scrollTop() > 50) {
+              $('.nav').addClass('affix');
+              $('.nav div.logo a').addClass('affix2');
+            $('.nav div.main_list ul li a').addClass('affix2');
+              console.log("OK");
+          } else {
+              $('.nav').removeClass('affix');
+              $('.nav div.logo a').removeClass('affix2');
+            $('.nav div.main_list ul li a').removeClass('affix2');
+          }
+      });
+  </script>
+  </nav>
+
+
+
+
+
 <div class="content-wrapper">
     <p class="para1"></p>
     <p class="first_paragraph">
@@ -31,20 +83,20 @@
        <br/>
        We have a wide range of adventures to fit all your needs! 
        <br/>
-       All you have to do is to insert your preferences
+       All you have to do is select your preferences
        <br/> 
        and with a simple click your registration will be ready for you to enjoy.
        <br/>   
     </p>
   </p>
-    </div>
+</div>
     
 
-    <div class="tab" >
-      <button class="tablinks" onclick="openInfo(event, 'Client')">Trips</button>
-      <button class="tablinks" onclick="openInfo(event, 'Products')">Activities</button>
-      <button class="tablinks" onclick="openInfo(event, 'Cart')">Register</button>
-    </div>
+<div class="tab" >
+  <button class="tablinks btn btn-primary " onclick="openInfo(event, 'Client')">Trips</button>
+  <button class="tablinks btn btn-primary" onclick="openInfo(event, 'Products')">Activities</button>
+  <button class="tablinks btn btn-primary" onclick="openInfo(event, 'Cart')">Register</button>
+</div>
 
   <div class="wrapper">
       <div id="homepage" class="tabcontent">
@@ -59,14 +111,9 @@
 
       <div id="Client" class="tabcontent">
         <div id="info" class="introduction">
-          <h2>Trip informations</h2>
-          <br>
-          <p>
-            Do you have any trip preference?
-          </p>
-          <br>
-          <b>Choose a Category:</b>
-          <p>
+          <h2>Trip Locations</h2></br>
+          <p>Do you have any location preferences? </br>
+          Choose your prefered location(s) from below:</br>
             <small>
               (if you have no preferences move on to activities)
             </small>
@@ -141,41 +188,38 @@
           
         </div>
         <br/>
-        <button id="selectrestrictions" type="button"  onclick="selectedRes()"><b>Select your current preferences</b></button>
+        <button id="selectrestrictions" type="button"  onclick="selectedRes()"><b>Apply Selected Preferences</b></button>
       </div>
 
       <div id="Products" class="tabcontent">
         <div id="prod" class="introduction">
-          <h3>Your targeted activities</h3>
+          <h3>Your Targeted Activities</h3>
           <br>
           <p>
-            We preselected activities based on your restrictions
+            We preselected activities based on your restrictions! 
+          </br> You may filter the activities results furthur using the filter buttons below. 
           </p>
         </div>
         <br>
-        <div class="tab" >
-          <button class="tablinks" onclick="openAll()">All Activities</button>
-          <button class="tablinks" onclick="openWater()">Water Sports</button>
-          <button class="tablinks" onclick="openLand()">Land Sports</button>
-          <button class="tablinks" onclick="openExtreme()">Extreme Sports</button>
+        <div class="tab">
+          <button class="tablinks activitiesbuttons " onclick="openAll()">All Activities</button>
+          <button class="tablinks activitiesbuttons" onclick="openWater()">Water Sports</button>
+          <button class="tablinks activitiesbuttons" onclick="openLand()">Land Sports</button>
+          <button class="tablinks activitiesbuttons" onclick="openExtreme()">Extreme Sports</button>
           </div>
         <div id="displayProduct" class="displayProd"></div>
         <br/>
-        <button id="addCart" type="button" class="block" onclick="selectedItems()"><b>Add selected items to cart</b></button>
+        <button id="addCart" type="button" class="block" onclick="selectedItems()"><b> Apply Selected Activities</b></button>
       </div>
 
 
       <div id="Cart" class="tabcontent">
         <div id="checkout" class="introduction">
-          <h3>
-            Result
-            <br>
-            <img src="pictures/cart.png" alt="">
-          </h3>
-          
-          <div id="displayCart"></div>
+          <h3> Result</h3>
+          <div id="displayCart">
           <a href="register.html" class="btn btn-primary">Register</a>
-
+        </div>
+      </div>
         </div>
         <br>
       </div>
