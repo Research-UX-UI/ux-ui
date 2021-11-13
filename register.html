@@ -73,6 +73,25 @@
 
     <section>
       <div class="container">
+
+        <div class="user signinBx">
+          <div class="imgBx"><img src="images/surfing.png" alt="" /></div>
+          <div class="formBx">
+            <form action="" onsubmit="return false;">
+              <h2>Create an account</h2>
+              <input type="text" name="" placeholder="Username" />
+              <input type="email" name="" placeholder="Email Address" />
+              <input type="password" name="" placeholder="Create Password" />
+              <input type="password" name="" placeholder="Confirm Password" />
+              <input type="submit" name="" value="Sign Up" />
+              <p class="signup">
+                Already have an account ?
+                <a href="#" onclick="toggleForm();">Sign in.</a>
+              </p>
+            </form>
+          </div>
+        </div>
+
         <div class="user signupBx">
           <div class="imgBx"><img src="images/banff.png" alt="" /></div>
           <div class="formBx">
@@ -88,29 +107,15 @@
             </form>
           </div>
         </div>
-        <div class="user signinBx">
-          <div class="formBx">
-            <form action="" onsubmit="return false;">
-              <h2>Create an account</h2>
-              <input type="text" name="" placeholder="Username" />
-              <input type="email" name="" placeholder="Email Address" />
-              <input type="password" name="" placeholder="Create Password" />
-              <input type="password" name="" placeholder="Confirm Password" />
-              <input type="submit" name="" value="Sign Up" />
-              <p class="signup">
-                Already have an account ?
-                <a href="#" onclick="toggleForm();">Sign in.</a>
-              </p>
-            </form>
-          </div>
-          <div class="imgBx"><img src="images/surfing.png" alt="" /></div>
-        </div>
+
+        
+
       </div>
     </section>
     <script>
         const toggleForm = () => {
-  const container = document.querySelector('.container');
-  container.classList.toggle('active');
+        const container = document.querySelector('.container');
+       container.classList.toggle('active');
 };
     </script>
   </body>
