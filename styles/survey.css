@@ -526,7 +526,6 @@ nav ul li a:before {
   transition: 0.8s;
 }
 
-
 .option_item:hover .boxtext{
   opacity: 1;
   font-size: 10px;
@@ -676,7 +675,7 @@ small {
 
 #checkout {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
 }
