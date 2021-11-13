@@ -730,13 +730,15 @@ nav ul li a:before {
     overflow: hidden;
     /* background-color: #F2F3F4; */
     color: white;
-    /* box-shadow: 0 5px 8px rgba(0,0,0,0.9); */
+   
     align-items: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-left: 450px;
     padding-right: 450px;
+    margin-left: 0px;
+  /* box-shadow: 0 5px 8px rgba(0,0,0,0.9); */
   }
   
   .tab h1 {
@@ -754,17 +756,17 @@ nav ul li a:before {
     outline: none;
     cursor: pointer;
     display: block;
-    /* padding: 14px 16px; */
+    padding: 12px 32px;
     transition: 0.3s;
     color: black;
     font-size: 25px;
-    background-color: #a6a6ff;
     align-items: center;
     justify-content: space-between;
-     border-radius: 5px;
-     border-color: #fff;
-     min-width: 120px;
+    border-radius: 3px;
+     min-width: 180px;
      text-align: center;
+     /* border: 3px solid #48233C; */
+  
   }
 
   .tab .activitiesbuttons{
@@ -774,16 +776,61 @@ nav ul li a:before {
     display: inline-block;
     font-size: 25px;
     border-radius: 5px;
-    background-color: #6796fd;
     margin-bottom: 50px;
     min-width: max-content;
+    margin-left:70px;
   }
   
   .tab button:hover {
-    background-color: #9a9afd;
+    background-color: #48233C;
+    border-color: #48233C;
   }
   
   .tab button.active {
-    background-color: #ffffff;
+    background-color: #48233C !important;
   }
+
+  .tab button:visited {
+    background-color: #48233C !important;
+  }
+
+  .btn-outline-primary {
+    color: #48233C;
+    background-color: transparent;
+    background-image: none;
+    border-color: #48233C
+}
+
+.btn-outline-primary:hover {
+    color: 48233C;
+    background-color: #48233C;
+    border-color: #48233C
+}
+
+.btn-outline-primary:focus,
+.btn-outline-primary.focus {
+    box-shadow: 0 0 0 .2rem #48233C
+}
+
+.btn-outline-primary.disabled,
+.btn-outline-primary:disabled {
+    color: #48233C;
+    background-color: transparent
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show>.btn-outline-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #48233C;
+    border-color: #48233C
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-outline-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 .2rem rgba(119, 204, 204, 0.5)
+}
+
+
 
