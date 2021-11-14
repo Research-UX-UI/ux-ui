@@ -525,6 +525,11 @@ nav ul li a:before {
   width: 120%;
   transition: 0.8s;
 }
+.tabcontent .introduction .signup a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #677eff;
+}
 
 .option_item:hover .boxtext{
   opacity: 1;
