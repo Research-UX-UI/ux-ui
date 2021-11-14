@@ -780,6 +780,7 @@ main {
 }
 .content-wrapper{
     padding : 50px;
+    /* font-family: 'Trebuchet MS', sans-serif; */
     /* padding-top: 200px; */
     box-sizing: border-box;
      align-items: center;
@@ -790,8 +791,8 @@ main {
     color: black;
     font-weight: 800;
 }
-h1{
-}
+
+
 h3{
    padding: 30px;
    margin-left: 30px; 

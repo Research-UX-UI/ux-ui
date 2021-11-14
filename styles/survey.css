@@ -485,6 +485,9 @@ nav ul li a:before {
 .displayProd .option_item{
   display: flex;
   margin: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  /* margin-bottom: 0%; */
 }
 
 
@@ -702,7 +705,7 @@ small {
 #addCart{
   left: 35%;
   right: inherit;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   padding: 20px;
 }
 
