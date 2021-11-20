@@ -1,26 +1,7 @@
 const selectedRestrictions = new Set()
 
 var products = [
-	// {
-	// 	name: "WATERSKI",
-	// 	picture: "images/waterskiing.png",
-	// 	Niagra: true,
-	// 	Banff: true,
-	// 	Whistler:true,
-	// 	Tremblant:true,
-	// 	Morne:true,
-	// 	type : "water",
-	// },
-	// {
-	// 	name: "SURFING",
-	// 	picture: "images/surfing.png",
-	// 	Niagra: false,
-	// 	Banff: false,
-	// 	Whistler:true,
-	// 	Tremblant:true,
-	// 	Morne:true,
-	// 	type : "water",
-	// },
+	
 	{
 		name: "CANOE",
 		picture: "images/canoe.png",
@@ -31,26 +12,6 @@ var products = [
 		Morne:true,
 		type : "water",
 	},
-	// {
-	// 	name: "KAYAK",
-	// 	picture: "images/kayak.png",
-	// 	Niagra: false,
-	// 	Banff: true,
-	// 	Whistler:true,
-	// 	Tremblant:true,
-	// 	Morne:true,
-	// 	type : "water",
-	// },
-	// {
-	// 	name: "FISHING",
-	// 	picture: "images/fishing.png",
-	// 	Niagra: false,
-	// 	Banff: true,
-	// 	Whistler:false,
-	// 	Tremblant:true,
-	// 	Morne:true,
-	// 	type : "water",
-	// },
 	{
 		name: "JETSKI",
 		picture: "images/jetski.png",
